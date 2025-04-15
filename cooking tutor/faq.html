@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ Section</title>
+    <style>
+        body {
+            background-color: rgb(175, 226, 218);
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        header, nav, main, footer {
+            padding: 20px;
+            text-align: center;
+        }
+
+        #head1 {
+            background-color: black;
+            color: rgb(17, 223, 206);
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        #logo1 {
+            height: 100px;
+            transition: transform 4s;
+        }
+
+        #logo1:hover {
+            transform: rotateZ(360deg);
+        }
+
+        #text1 {
+            font-size: 2em;
+            font-weight: bold;
+        }
+
+        .container {
+            padding: 16px;
+            max-width: 800px;
+            margin: auto;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .faq-section {
+            margin: 20px 0;
+        }
+
+        .faq-title {
+            font-size: 1.5em;
+            color: #04AA6D;
+            margin-bottom: 10px;
+        }
+
+        .faq-item {
+            margin-bottom: 10px;
+        }
+
+        .faq-question {
+            background-color: #04AA6D;
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .faq-question:hover {
+            background-color: #028a5e;
+        }
+
+        .faq-answer {
+            display: none;
+            padding: 10px;
+            border-left: 3px solid #04AA6D;
+            background-color: #f1f1f1;
+            border-radius: 0 5px 5px 5px;
+        }
+
+        .footerdiv {
+            background-color: black;
+            color: aliceblue;
+            text-align: center;
+            padding: 20px;
+        }
+
+        @media screen and (max-width: 600px) {
+            #text1 {
+                font-size: 1.5em;
+            }
+
+            .container {
+                padding: 8px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header id="head1">
+        <img style="border-radius: 100%;" id="./headlogo.png" src="headlogo.png" alt="Logo">
+
+        <div id="text1">FAQ</div>
+    </header>
+    <main>
+        <div class="container">
+            <div class="faq-section">
+                <div class="faq-title">Frequently Asked Questions</div>
+                <div class="faq-item">
+                    <div class="faq-question">What is Cooking Tutor?</div>
+                    <div class="faq-answer">Cooking Tutor is an online platform that provides cooking tutorials, recipes, and expert tips to help you become a better cook.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">Who is the founder of Cooking Tutor?</div>
+                    <div class="faq-answer">Cooking Tutor was founded by Abhishek Pathak, a student of ABES Engineering College, in 2024.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">How can I contact Cooking Tutor?</div>
+                    <div class="faq-answer">You can contact us through the contact form on our website or by emailing us at support@cookingtutor.com.</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">Is Cooking Tutor free to use?</div>
+                    <div class="faq-answer">Yes, Cooking Tutor is free to use. We offer a variety of free resources to help you improve your cooking skills.</div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="footerdiv">
+        <p>&copy; 2024 Cooking Tutor. All rights reserved.</p>
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const faqQuestions = document.querySelectorAll('.faq-question');
+            faqQuestions.forEach(question => {
+                question.addEventListener('click', function() {
+                    const answer = this.nextElementSibling;
+                    if (answer.style.display === 'block') {
+                        answer.style.display = 'none';
+                    } else {
+                        answer.style.display = 'block';
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
