@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <style>
+        body {
+            background-color: rgb(175, 226, 218);
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        header, nav, main, footer {
+            padding: 20px;
+            text-align: center;
+        }
+
+        #head1 {
+            background-color: black;
+            color: rgb(17, 223, 206);
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        #logo1 {
+            height: 100px;
+            transition: transform 4s;
+        }
+
+        #logo1:hover {
+            transform: rotateZ(360deg);
+        }
+
+        #text1 {
+            font-size: 2em;
+            font-weight: bold;
+        }
+
+        .container {
+            padding: 16px;
+            max-width: 800px;
+            margin: auto;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .content {
+            text-align: left;
+        }
+
+        .content h2 {
+            color: #04AA6D;
+        }
+
+        .content p {
+            margin: 10px 0;
+        }
+
+        .footerdiv {
+            background-color: black;
+            color: aliceblue;
+            text-align: center;
+            padding: 20px;
+        }
+
+        @media screen and (max-width: 600px) {
+            #text1 {
+                font-size: 1.5em;
+            }
+
+            .container {
+                padding: 8px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header id="head1">
+        <img style="border-radius: 100%;" id="./headlogo.png" src="headlogo.png" alt="Logo">
+
+        <div id="text1">About Us</div>
+    </header>
+    <main>
+        <div class="container">
+            <div class="content">
+                <h2>About Cooking Tutor</h2>
+                <p>Welcome to Cooking Tutor, your number one source for all things cooking. We're dedicated to providing you the very best of cooking tutorials, with an emphasis on easy-to-follow recipes, expert tips, and a supportive community.</p>
+                <h2>Our Founder</h2>
+                <p>Founded in 2024 by Abhishek Pathak, Cooking Tutor has come a long way from its beginnings in ABES Engineering College. When Abhishek first started out, his passion for cooking and teaching others drove him to start this website, and gave him the impetus to turn hard work and inspiration into a booming online community.</p>
+                <h2>Our Mission</h2>
+                <p>Our mission is to make cooking accessible and enjoyable for everyone. Whether you're a beginner or an experienced cook, we aim to provide you with the resources and support you need to succeed in the kitchen.</p>
+                <h2>Contact Us</h2>
+                <p>If you have any questions or comments, please don't hesitate to contact us. We're always here to help!</p>
+            </div>
+        </div>
+    </main>
+    <footer class="footerdiv">
+        <p>&copy; 2024 Cooking Tutor. All rights reserved.</p>
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('About Us page loaded');
+        });
+    </script>
+</body>
+</html>

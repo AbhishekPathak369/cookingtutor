@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="./index.css">
+</head>
+<body>
+    <div id="head1">
+        <img id="logo1" src="logo.png" alt="Logo">
+        <div id="text1">Register</div>
+    </div>
+    <form id="registrationForm">
+        <div class="container">
+            <label for="email"><b>Email</b></label>
+            <input type="text" placeholder="Enter Email" name="email" required>
+
+            <label for="psw"><b>Password</b></label>
+            <input type="password" placeholder="Enter Password" name="psw" required>
+
+            <label for="psw-repeat"><b>Repeat Password</b></label>
+            <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
+
+            <button type="submit" class="registerbtn">Register</button>
+        </div>
+    </form>
+
+    <div id="recipes">
+        <h2>Recipes</h2>
+        <div class="recipe" id="recipe1">
+            <h3>Recipe 1</h3>
+            <p>Details of Recipe 1...</p>
+            <video controls>
+                <source src="recipe1.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+        <div class="recipe" id="recipe2">
+            <h3>Recipe 2</h3>
+            <p>Details of Recipe 2...</p>
+            <video controls>
+                <source src="recipe2.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+        <!-- Add more recipes as needed -->
+    </div>
+
+    <script src="./index.js"></script>
+</body>
+</html>
+
+body {
+    background-color: rgb(175, 226, 218);
+}
+
+.container {
+    padding: 16px;
+}
+
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border: none;
+    background: #f1f1f1;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+    background-color: #ddd;
+    outline: none;
+}
+
+.registerbtn {
+    background-color: #04AA6D;
+    color: white;
+    padding: 16px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    opacity: 0.9;
+}
+
+.registerbtn:hover {
+    opacity: 1;
+}
+
+#recipes {
+    padding: 16px;
+}
+
+.recipe {
+    margin-bottom: 20px;
+}
+
+video {
+    width: 100%;
+    height: auto;
+}
+JavaScript
+document.getElementById('registrationForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    const email = event.target.email.value;
+    const password = event.target.psw.value;
+    const passwordRepeat = event.target['psw-repeat'].value;
+
+    if (password !== passwordRepeat) {
+        alert('Passwords do not match!');
+        return;
+    }
+
+    const user = {
+        email: email,
+        password: password
+    };
+
+    localStorage.setItem('user', JSON.stringify(user));
+    alert('Registration successful!');
+});
+This code adds a section for recipes with a video for each recipe. You can add more recipes by duplicating the <div class="recipe"> block and updating the details and video source accordingly. Let me know if you need any further modifications!
+
+
+Edit in Pages
+
+
+1 of 30 responses
+AI-generated content may be incorrect
+
+
+December 10, 2024 at 10:33 AM
+You said:
+Copilot said:
+Sure, I'll add a video section for each recipe in your HTML code. Here's the updated version:
+
+HTML
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cooking_Tutor</title>
+    <link rel="stylesheet" href="code.css">
+    <link rel="icon" type="image/png" href="headlogo.png">
+</head>
+<body>
+<header>
+   <div id="head1">
+       <img id="logo1" style="border-radius: 100%;" src="headlogo.png" alt="Online Doctor Consultation Logo" class="logo"> 
+       <div id="text1">Cooking Tutor
+           <div class="typewriter" id="text2">From Recipe to Reality</div>
+       </div>
+   </div>
+</header>
+<nav>
+    <div class="div2">
+        <a class="navtext" href="#"><h3>Home</h3></a>
+        <a class="navtext" href="newregistration.html"><h3>Registration</h3></a>
+        <a class="navtext" href="./contactus.html"><h3>Contact Us</h3></a>
+        <a class="navtext" href="./faq.html"><h3>FAQ</h3></a>
+        <a class="navtext" href="./aboutus.html"><h3>About Us</h3></a>
+    </div>
+</nav>
+<br>
+<!-- Sweet Recipes -->
+<div class="div3 cdiv divr">
+    <h2 style="text-align: center; font-size:40px">Sweet Recipes</h2>
+    <br>
+    <div id="div3">
+        <a class="sweetlink" href="rasgulla.html">
+            <p style="font-size: larger; text-align:center">
+                <img class="imgh" id="rasgu" src="rasgulla.jpeg" alt=""><br> Rasgulla
+            </p>
+            <video controls>
+                <source src="rasgulla.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </a>
+        <a class="sweetlink" href="jalebi.html">
+            <p style="font-size: larger; text-align:center">
+                <img class="imgh" id="rasgu" src="jalebi.jpeg" alt=""><br> Jalebi
+            </p>
+            <video controls>
+                <source src="jalebi.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </a>
+        <a class="sweetlink" href="kheer.html">
+            <p style="font-size: larger; text-align:center">
+                <img class="imgh" id="rasgu" src="kheer.jpeg" alt=""><br> Kheer
+            </p>
+            <video controls>
+                <source src="kheer.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </a>
+        <a class="sweetlink" href="barfi.html">
+            <p style="font-size: larger; text-align:center">
+                <img class="imgh" id="rasgu" src="barfi.jpeg" alt=""><br> Barfi
+            </p>
+            <video controls>
+                <source src="barfi.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </a>
+        <a class="sweetlink" href="rasmalai.html">
+            <p style="font-size: larger; text-align:center">
+                <img class="imgh" id="rasgu" src="OIP.jpeg" alt=""><br> Rasmalai
+            </p>
+            <video controls>
+                <source src="rasmalai.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </a>
+        <a class="sweetlink" href="sonpapdi.html">
+            <p style="font-size: larger; text-align:center">
+                <img class="imgh" id="rasgu" src="sonpapdi.jpeg" alt=""><br> Sonpapdi
+            </p>
+            <video controls>
+                <source src="sonpapdi.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </a>
+    </div>
+</div>
+<!-- Fast Food Recipes -->
+<br>
+<div class="div3 cdiv divr">
+    <h2 style="text-align: center; font-size:40px">Fast Food Recipes</h2>
+    <br>
+    <div id="div3">
+        <a class="sweetlink" href="pizza.html">
+            <p style="font-size: larger; text-align:center">
+                <img class="imgh" id="rasgu" src="pizza.jpeg" alt=""><br> Pizza
+            </p>
+            <video controls>
+                <source src="pizza.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </a>
+        <a class="sweetlink" href="momos.html">
+            <p style="font-size: larger; text-align:center">
+                <img class="imgh" id="rasgu" src="momos.jpeg" alt=""><br> Momos
+            </p>
+            <video controls>
+                <source src="momos.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </a>
+        <a class="sweetlink" href="chowmein.html">
+            <p style="font-size: larger; text-align:center">
+                <img class="imgh" id="rasgu" src="chowmein.jpeg" alt=""><br> Chowmein
+            </p>
+            <video controls>
+                <source src="chowmein.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </a>
+        <a class="sweetlink" href="samosa.html">
+            <p style="font-size: larger; text-align:center">
+                <img class="imgh" id="rasgu" src="samosa.jpeg" alt=""><br> Samosa
+            </p>
+            <video controls>
+                <source src="samosa.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </a>
+        <a class="sweetlink" href="munchurian.html">
+            <p style="font-size: larger; text-align:center">
+                <img class="imgh" id="rasgu" src="munchurian.jpeg" alt=""><br> Munchurian
+            </p>
+            <video controls>
+                <source src="munchurian.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </a>
+        <a class="sweetlink" href="burger.html">
+            <p style="font-size: larger; text-align:center">
+                <img class="imgh" id="rasgu" src="burger.jpeg" alt=""><br> Burger
+            </p>
+            <video controls>
+                <source src="burger.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </a>
+    </div>
+</div>
+<br><br>
+<footer>
+    <div class="footerdiv">
+        <h3 style="text-align: center; color:rgb(126, 174, 216)">Made By Abhiii Pathak</h3>
+        <br><br>
+        <p style="text-align: end;">Email:-<a style="color: rgb(229, 45, 45);" href="mailto:Pathakansh290@gmail.com">Pathakansh290@gmail.com</a></p>
+    </div>
+</footer>
+</body>
+</html
